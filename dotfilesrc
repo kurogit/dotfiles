@@ -1,5 +1,5 @@
 [dotfiles]
-    repository = dotfiles
+    repository = /home/patrick/dotfiles
 ignore = [
     '.git',
     '.gitignore',
