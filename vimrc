@@ -43,6 +43,8 @@ set softtabstop=4 " number of spaces in tab
 set expandtab
 set smarttab
 
+set hidden
+
 set number " show line numbers
 set relativenumber " show relative line numbers
 set showcmd " show command in bar
@@ -96,10 +98,26 @@ set modelines=1
 " GUI {{{
 set mousehide
 set guioptions=acg
+
+" Maximize window on start
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window (for an alternative on Windows, see simalt below).
+  set lines=999 columns=999
+else
+  " This is console Vim.
+  if exists("+lines")
+    set lines=50
+  endif
+  if exists("+columns")
+    set columns=100
+  endif
+endif
 " }}}
 
 " vim-airline {{{
 set laststatus=2
+let g:airline#extensions#tabline#enabled=1
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
