@@ -1,3 +1,4 @@
+" NeoBundle {{{
 " Note: Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
 
@@ -32,6 +33,7 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
+" }}}
 
 " Color {{{
 colorscheme badwolf
