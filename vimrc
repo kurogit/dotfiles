@@ -35,44 +35,113 @@ filetype plugin indent on
 NeoBundleCheck
 " }}}
 
-" Color {{{
-colorscheme badwolf
-syntax on " enalbe syntax processing
+" General {{{
+set history=700
+
+filetype indent on " load indent files
+filetype plugin on " load plugin files
+
+" Set to auto read when a file is changed outside
+set autoread
+
+" Leader maps
+let mapleader = ","
+let g:mapleader = ","
+
+nmap <leader>w :w!<cr>
+
 " }}}
 
-set tabstop=4 " number of visual spaces per TAB
-set softtabstop=4 " number of spaces in tab
-set expandtab
-set smarttab
+" UI {{{
+set wildmenu " visual autocomplete
 
-set hidden
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+
+" Show current position
+set ruler
 
 set number " show line numbers
 set relativenumber " show relative line numbers
 set showcmd " show command in bar
 set cursorline " highlight line
 
-filetype indent on " load indent files
+" Enable virtual edit
+set virtualedit=all
+" Height of command bar
+set cmdheight=2
 
-set wildmenu " visual autocomplete
+" Unwritten buffers can hide
+set hidden
 
-set lazyredraw " redraw only when needed
-set showmatch " highlight matching parens
-set ttyfast
+" Backspace config
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
 
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" For regular expressions turn magic on
 set magic
 
-" Visual {{{
-set list
-set listchars+=space:·,eol:↵,tab:>>
+" Show matching brackets when text indicator is over them
+set showmatch
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
 " }}}
 
-set virtualedit=all " enable moving over nothing
+" Color and font {{{
+syntax on " enalbe syntax processing
+colorscheme badwolf
 
-" Searching {{{
-set incsearch
-set hlsearch
-nnoremap <leader><space> :nohlsearch<CR>
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+" }}}
+
+" Text, tab and indent related {{{
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+"
+set list
+set listchars+=space:·,eol:↵,tab:>>
 " }}}
 
 " Folding {{{
@@ -82,20 +151,51 @@ set foldnestmax=10      " 10 nested fold max
 set foldmethod=indent   " fold based on indent level
 " }}}
 
-let mapleader=","       " leader is comma
+" Moving around, windows and buffers {{{
 
-" Be gone {{{
+" Away with arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-" }}}
+
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Close the current buffer
+map <leader>bd :bd<cr>
+
+" Close all the buffers
+map <leader>ba :1,1000 bd!<cr>
+
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+" Remember info about open buffers on close
+set viminfo^=%
 
 " edit vimrc and load vimrc bindings
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 set modelines=1
+
+" }}}
 
 " GUI {{{
 set mousehide
