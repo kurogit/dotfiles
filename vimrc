@@ -24,6 +24,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'sjl/badwolf'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'octol/vim-cpp-enhanced-highlight'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'rdnetto/YCM-Generator'
 
 call neobundle#end()
 
@@ -62,7 +66,7 @@ set wildignore=*.o,*~,*.pyc
 set ruler
 
 set number " show line numbers
-set relativenumber " show relative line numbers
+"set relativenumber " show relative line numbers
 set showcmd " show command in bar
 set cursorline " highlight line
 
@@ -220,6 +224,14 @@ endif
 " vim-airline {{{
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
+" }}}
+
+" NERDTree {{{
+map <F5> :NERDTreeToggle<cr>
+" }}}
+
+" CTRLP.VIM {{{
+
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
