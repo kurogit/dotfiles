@@ -28,6 +28,8 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ervandew/supertab'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 
 " Unix only plugins:
 if has('unix')
