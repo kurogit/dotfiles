@@ -26,8 +26,14 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'octol/vim-cpp-enhanced-highlight'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'rdnetto/YCM-Generator'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ervandew/supertab'
+
+" Unix only plugins:
+if has('unix')
+    NeoBundle 'Valloric/YouCompleteMe'
+    NeoBundle 'rdnetto/YCM-Generator'
+endif
 
 call neobundle#end()
 
