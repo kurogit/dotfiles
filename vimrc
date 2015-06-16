@@ -250,4 +250,13 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " }}}
 
+" Misc {{{
+" Spell checking
+set spell
+set spelllang=en,de
+
+" Doxygen
+let g:load_doxygen_syntax=1
+" }}}
+
 " vim:foldmethod=marker:foldlevel=0
