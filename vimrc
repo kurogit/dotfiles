@@ -21,7 +21,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
-NeoBundle 'sjl/badwolf'
+"NeoBundle 'sjl/badwolf'
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'octol/vim-cpp-enhanced-highlight'
 NeoBundle 'scrooloose/nerdtree'
@@ -30,6 +31,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'tpope/vim-unimpaired'
 
 " Unix only plugins:
 if has('unix')
@@ -76,7 +78,7 @@ set ruler
 set number " show line numbers
 "set relativenumber " show relative line numbers
 set showcmd " show command in bar
-set cursorline " highlight line
+"set cursorline " highlight line
 
 " Enable virtual edit
 set virtualedit=all
@@ -123,7 +125,9 @@ set tm=500
 
 " Color and font {{{
 syntax on " enalbe syntax processing
-colorscheme badwolf
+set background=light
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -153,7 +157,7 @@ set wrap "Wrap lines
 
 "
 set list
-set listchars+=space:·,eol:↵,tab:>>
+set listchars+=trail:·,eol:↵,tab:>>
 " }}}
 
 " Folding {{{
@@ -248,6 +252,16 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" }}}
+
+" YCM {{{
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_insertion=1
+" }}}
+
+" clang-format {{{
+map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
+imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<cr>
 " }}}
 
 " Misc {{{
