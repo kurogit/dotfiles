@@ -3,3 +3,5 @@
 	name = Patrick Schwartz
 [push]
 	default = simple
+[alias]
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
