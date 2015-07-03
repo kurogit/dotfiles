@@ -32,6 +32,7 @@ NeoBundle 'ervandew/supertab'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'lervag/vimtex'
 
 " Unix only plugins:
 if has('unix')
@@ -264,13 +265,31 @@ map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
 imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<cr>
 " }}}
 
+" vimtex {{{
+" Use ycm for completion
+if !exists('g:ycm_semantic_triggers')
+
+    let g:ycm_semantic_triggers = {}
+  endif
+  let g:ycm_semantic_triggers.tex = [
+        \ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*'
+        \ ]
+
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+" }}}
+
 " Misc {{{
 " Spell checking
 set spell
-set spelllang=en,de
+set spelllang=de,en
 
 " Doxygen
 let g:load_doxygen_syntax=1
+
+" Latex
+let g:tex_flavor = "latex"
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
