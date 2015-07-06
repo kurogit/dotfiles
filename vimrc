@@ -290,6 +290,12 @@ let g:load_doxygen_syntax=1
 
 " Latex
 let g:tex_flavor = "latex"
+
+" Auto close Quickfix window
+aug QFClose
+  au!
+  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
+aug END
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
