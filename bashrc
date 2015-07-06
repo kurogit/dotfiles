@@ -9,5 +9,6 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 
 alias g='gvim --remote-silent'
+alias cower='cower -c'
 
 PS1='[\u@\h \W]\$ '
