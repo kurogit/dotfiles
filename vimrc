@@ -82,7 +82,7 @@ set showcmd " show command in bar
 "set cursorline " highlight line
 
 " Enable virtual edit
-set virtualedit=all
+"set virtualedit=all
 " Height of command bar
 set cmdheight=2
 
