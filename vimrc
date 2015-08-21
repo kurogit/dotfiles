@@ -33,6 +33,7 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'lervag/vimtex'
+NeoBundle 'vim-scripts/a.vim'
 
 " Unix only plugins:
 if has('unix')
@@ -77,7 +78,7 @@ set wildignore=*.o,*~,*.pyc
 set ruler
 
 set number " show line numbers
-"set relativenumber " show relative line numbers
+set relativenumber " show relative line numbers
 set showcmd " show command in bar
 "set cursorline " highlight line
 
