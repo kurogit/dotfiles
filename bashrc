@@ -5,6 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+localfile="$HOME/.bashrc.local"
+if [ -f ${localfile} ]; then
+    source ${localfile}
+fi
+
 alias ls='ls --color=auto'
 alias ll='ls -l'
 
