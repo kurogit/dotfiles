@@ -128,7 +128,6 @@ set tm=500
 " Color and font {{{
 syntax on " enalbe syntax processing
 set background=light
-let g:solarized_termcolors=256
 colorscheme solarized
 
 " Set utf8 as standard encoding and en_US as the standard language
