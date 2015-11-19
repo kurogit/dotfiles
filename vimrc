@@ -34,6 +34,7 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'lervag/vimtex'
 NeoBundle 'vim-scripts/a.vim'
+NeoBundle 'aklt/plantuml-syntax'
 
 " Unix only plugins:
 if has('unix')
