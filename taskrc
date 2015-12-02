@@ -29,10 +29,10 @@ data.location=~/.task
 include /usr/share/doc/task/rc/holidays.de-DE.rc
 
 taskd.server=freecinc.com:53589
-taskd.key=\/home\/patrick\/.task\/freecinc_5ae9cd8c.key.pem
-taskd.certificate=\/home\/patrick\/.task\/freecinc_5ae9cd8c.cert.pem
-taskd.ca=\/home\/patrick\/.task\/freecinc_5ae9cd8c.ca.pem
-taskd.credentials=FreeCinc\/freecinc_5ae9cd8c\/8bf345f3-113e-436e-a1a8-c218aa76038a
+taskd.key=\/home\/patrick\/.task\/freecinc_aff8731a.key.pem
+taskd.certificate=\/home\/patrick\/.task\/freecinc_aff8731a.cert.pem
+taskd.ca=\/home\/patrick\/.task\/freecinc_aff8731a.ca.pem
+taskd.credentials=FreeCinc\/freecinc_aff8731a\/e172522d-2992-48d5-8720-7326820d5884
 
 dateformat=D.M.Y # Preferred input and display date format
 
