@@ -10,7 +10,7 @@ if [ -f ${localfile} ]; then
     source ${localfile}
 fi
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto -h'
 alias ll='ls -l'
 
 alias g='gvim --remote-silent'
