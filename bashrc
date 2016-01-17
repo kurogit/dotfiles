@@ -11,7 +11,7 @@ if [ -f ${localfile} ]; then
 fi
 
 alias ls='ls --color=auto -h'
-alias ll='ls -l'
+alias ll='ls -hl'
 
 alias g='gvim --remote-silent'
 alias cower='cower -c'
