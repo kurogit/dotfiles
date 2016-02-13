@@ -128,11 +128,21 @@ set tm=500
 
 " Color and font {{{
 syntax on " enalbe syntax processing
-set background=light
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+    set t_Co=16
+    let g:solarized_termcolors=16
+    let g:solarized_termtrans=1
+endif
 colorscheme solarized
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
+
+" guifont
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -231,6 +241,7 @@ endif
 
 " vim-airline {{{
 set laststatus=2
+let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 " }}}
 
