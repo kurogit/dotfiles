@@ -35,6 +35,7 @@ NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'lervag/vimtex'
 NeoBundle 'vim-scripts/a.vim'
 NeoBundle 'aklt/plantuml-syntax'
+NeoBundle 'wting/rust.vim'
 
 " Unix only plugins:
 if has('unix')
