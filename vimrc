@@ -265,6 +265,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " YCM {{{
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_server_python_interpreter='/usr/bin/python3'
 " }}}
 
 " clang-format {{{
