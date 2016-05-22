@@ -36,6 +36,7 @@ NeoBundle 'lervag/vimtex'
 NeoBundle 'vim-scripts/a.vim'
 NeoBundle 'aklt/plantuml-syntax'
 NeoBundle 'wting/rust.vim'
+NeoBundle 'cyberkov/openhab-vim'
 
 " Unix only plugins:
 if has('unix')
