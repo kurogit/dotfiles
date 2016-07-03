@@ -1,57 +1,29 @@
-" NeoBundle {{{
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
+" Plug {{{
+call plug#begin('~/.vim/plugged')
 
-if has('vim_starting')
- if &compatible
-   set nocompatible               " Be iMproved
-  endif
-
- " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-"NeoBundle 'sjl/badwolf'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'octol/vim-cpp-enhanced-highlight'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'lervag/vimtex'
-NeoBundle 'vim-scripts/a.vim'
-NeoBundle 'aklt/plantuml-syntax'
-NeoBundle 'wting/rust.vim'
-NeoBundle 'cyberkov/openhab-vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-unimpaired'
+Plug 'lervag/vimtex'
+Plug 'vim-scripts/a.vim'
+Plug 'aklt/plantuml-syntax'
+Plug 'wting/rust.vim'
+Plug 'cyberkov/openhab-vim'
 
 " Unix only plugins:
 if has('unix')
-    NeoBundle 'Valloric/YouCompleteMe'
-    NeoBundle 'rdnetto/YCM-Generator'
+    Plug 'Valloric/YouCompleteMe'
+    Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 endif
 
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+call plug#end()
 " }}}
 
 " General {{{
