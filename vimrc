@@ -242,20 +242,30 @@ let g:ycm_server_python_interpreter='/usr/bin/python3'
 " }}}
 
 " clang-format {{{
-map <C-K> :%pyf /usr/share/clang/clang-format.py<cr>
-imap <C-K> <c-o>:%pyf /usr/share/clang/clang-format.py<cr>
+autocmd FileType cpp nnoremap <buffer> <C-K> :%pyf /usr/share/clang/clang-format.py<cr>
+autocmd FileType cpp inoremap <C-K> <c-o> :%pyf /usr/share/clang/clang-format.py<cr>
+" }}}
+
+" latexindent {{{
+autocmd FileType tex nnoremap <buffer> <C-K> :!latexindent -s -w %<cr>
+autocmd FileType tex inoremap <buffer> <C-K> <c-o> :!latexindent -s -w %<cr>
 " }}}
 
 " vimtex {{{
 " Use ycm for completion
 if !exists('g:ycm_semantic_triggers')
-
     let g:ycm_semantic_triggers = {}
-  endif
-  let g:ycm_semantic_triggers.tex = [
-        \ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*'
-        \ ]
-
+endif
+let g:ycm_semantic_triggers.tex = [
+    \ 're!\\[A-Za-z]*cite[A-Za-z]*(\[[^]]*\]){0,2}{[^}]*',
+    \ 're!\\[A-Za-z]*ref({[^}]*|range{([^,{}]*(}{)?))',
+    \ 're!\\hyperref\[[^]]*',
+    \ 're!\\includegraphics\*?(\[[^]]*\]){0,2}{[^}]*',
+    \ 're!\\(include(only)?|input){[^}]*',
+    \ 're!\\\a*(gls|Gls|GLS)(pl)?\a*(\s*\[[^]]*\]){0,2}\s*\{[^}]*',
+    \ 're!\\includepdf(\s*\[[^]]*\])?\s*\{[^}]*',
+    \ 're!\\includestandalone(\s*\[[^]]*\])?\s*\{[^}]*',
+    \ ]
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
