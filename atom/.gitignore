@@ -1,0 +1,9 @@
+.*/
+blob-store/
+compile-cache/
+electron/
+packages/
+recovery/
+storage/
+
+nohup.out

@@ -1,0 +1,40 @@
+"*":
+  "atom-beautify":
+    cpp:
+      default_beautifier: "clang-format"
+    general:
+      analytics: false
+    markdown:
+      default_beautifier: "Remark"
+  core:
+    disabledPackages: [
+      "spell-check"
+      "language-gfm"
+      "markdown-preview"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+  editor:
+    invisibles: {}
+    showInvisibles: true
+  "exception-reporting":
+    userId: "6503378f-2372-43fc-d0e1-dbc45a92c08d"
+  linter: {}
+  "linter-spell": {}
+  "linter-write-good":
+    nodePath: "node"
+  "markdown-preview-plus":
+    enablePandoc: true
+  "markdown-writer":
+    siteEngine: "jekyll"
+  "one-light-ui": {}
+  "switch-header-source": {}
+  welcome:
+    showOnStartup: false
+".diff.source":
+  editor:
+    showIndentGuide: true
+    softWrap: true

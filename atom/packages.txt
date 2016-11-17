@@ -1,0 +1,14 @@
+atom-beautify@0.29.13
+git-plus@5.24.2
+intentions@1.1.2
+language-cmake@0.2.0
+language-cpp14@0.6.2
+language-pfm@0.82.0
+linter@1.11.18
+linter-spell@0.12.3
+linter-write-good@0.8.0
+markdown-preview-plus@2.4.0
+markdown-writer@2.6.1
+platformio-ide-terminal@2.2.1
+switch-header-source@0.20.0
+

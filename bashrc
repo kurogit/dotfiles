@@ -17,3 +17,5 @@ alias g='gvim --remote-silent'
 alias cower='cower -c'
 
 PS1='[\u@\h \W]\$ '
+
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
