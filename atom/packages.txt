@@ -1,14 +1,19 @@
 atom-beautify@0.29.13
+file-icons@1.7.25
 git-plus@5.25.3
+highlight-selected@0.11.2
 intentions@1.1.2
 language-cmake@0.2.0
 language-cpp14@0.6.2
 language-pfm@0.82.0
 linter@1.11.18
+linter-markdown@3.0.2
 linter-spell@0.12.4
 linter-write-good@0.8.0
 markdown-preview-plus@2.4.0
 markdown-writer@2.6.2
+minimap@4.25.6
+minimap-highlight-selected@4.4.0
 platformio-ide-terminal@2.2.2
 switch-header-source@0.20.0
 

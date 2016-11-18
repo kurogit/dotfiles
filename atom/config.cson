@@ -6,6 +6,7 @@
       analytics: false
     markdown:
       default_beautifier: "Remark"
+      disabled: true
   core:
     disabledPackages: [
       "spell-check"
@@ -22,14 +23,18 @@
     showInvisibles: true
   "exception-reporting":
     userId: "6503378f-2372-43fc-d0e1-dbc45a92c08d"
+  "highlight-selected":
+    highlightBackground: true
   linter: {}
   "linter-spell": {}
   "linter-write-good":
     nodePath: "node"
+    severityLevel: "Warning"
   "markdown-preview-plus":
     enablePandoc: true
   "markdown-writer":
     siteEngine: "jekyll"
+  minimap: {}
   "one-light-ui": {}
   "switch-header-source": {}
   welcome:
