@@ -34,7 +34,10 @@
     enablePandoc: true
   "markdown-writer":
     siteEngine: "jekyll"
-  minimap: {}
+  minimap:
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
   "one-light-ui": {}
   "switch-header-source": {}
   welcome:
