@@ -4,6 +4,9 @@
       default_beautifier: "clang-format"
     general:
       analytics: false
+    latex:
+      indent_with_tabs: false
+      remove_trailing_whitespace: true
     markdown:
       default_beautifier: "Remark"
       disabled: true
@@ -13,20 +16,51 @@
       "language-gfm"
       "markdown-preview"
     ]
+    packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
     themes: [
       "one-light-ui"
       "solarized-light-syntax"
     ]
   editor:
+    fontSize: 15
     invisibles: {}
     showInvisibles: true
+    softWrap: true
   "exception-reporting":
     userId: "6503378f-2372-43fc-d0e1-dbc45a92c08d"
+  "git-plus":
+    general:
+      _analyticsUserId: "c35e2ab4-e75a-49fd-89d0-97a58ce1c261"
   "highlight-selected":
     highlightBackground: true
+  languagetool:
+    motherTongue: "de-DE"
+  latex:
+    enableSynctex: false
+    engine: "lualatex"
+    texPath: "/usr/bin"
+  "latex-plus":
+    ghostscriptBin: "/usr/bin"
+    texBin: "/usr/bin"
   linter: {}
-  "linter-spell": {}
+  "linter-languagetool":
+    languagetoolServerPath: "usr/share/java/languagetool/languagetool-server.jar"
+  "linter-spell":
+    markdownWords: [
+      "------------------"
+    ]
+  "linter-spell-latex":
+    words: [
+      "pdfborder"
+      "linkcolor"
+      "ligatures"
+      "latin"
+      "german"
+      "english"
+      "pt"
+      "visual"
+    ]
   "linter-write-good":
     nodePath: "node"
     severityLevel: "Warning"
@@ -42,7 +76,13 @@
   "switch-header-source": {}
   welcome:
     showOnStartup: false
+".bibtex.text":
+  editor:
+    softWrap: true
 ".diff.source":
   editor:
     showIndentGuide: true
+    softWrap: true
+".latex.tex.text":
+  editor:
     softWrap: true
