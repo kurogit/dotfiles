@@ -18,4 +18,6 @@ alias cower='cower -c'
 
 PS1='[\u@\h \W]\$ '
 
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
